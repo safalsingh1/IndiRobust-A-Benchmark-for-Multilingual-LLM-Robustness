@@ -47,15 +47,15 @@ We move beyond simple Gaussian noise to strictly linguistic perturbations releve
 ### 2. Evaluation Metrics
 We define rigorous metrics to measure not just accuracy, but stability:
 - **Accuracy**: Standard classification accuracy.
-  $$ Acc = \frac{TP + TN}{N} $$
+  $Acc = \frac{TP + TN}{N}$
 - **Macro F1**: Harmonic mean of precision and recall, averaged across classes (critical for imbalanced datasets).
-  $$ F1_{macro} = \frac{1}{C} \sum_{i=1}^{C} F1_i $$
+  $F1_{macro} = \frac{1}{C} \sum_{i=1}^{C} F1_i$
 - **Relative Robustness Drop ($\Delta_{rel}$)**: Percentage degradation from clean performance.
-  $$ \Delta_{rel} = \frac{Acc_{clean} - Acc_{perturbed}}{Acc_{clean}} \times 100 $$
+  $\Delta_{rel} = \frac{Acc_{clean} - Acc_{perturbed}}{Acc_{clean}} \times 100$
 - **Consistency Score**: The probability that a model predicts the same label for $x$ and $x'$, invariant of correctness.
-  $$ C = \frac{1}{N} \sum \mathbb{I}(f(x) = f(x')) $$
+  $C = \frac{1}{N} \sum \mathbb{I}(f(x) = f(x'))$
 - **Flip Rate**: The rate at which predictions change solely due to noise.
-  $$ FR = 1 - C $$
+  $FR = 1 - C$
 
 ---
 
