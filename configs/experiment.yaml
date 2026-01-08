@@ -1,0 +1,28 @@
+experiment_name: "indic_robustness_v2"
+
+models:
+  - name: "google/muril-base-cased"
+    batch_size: 4
+
+tasks:
+  - name: "bbca.hi"
+    type: "classification"
+  # - name: "copa.en"
+  #   type: "nli"
+  # - name: "wstp.mr" # might vary in structure, disabling to ensure at least some success first
+  #   type: "classification" 
+
+perturbations:
+  - type: "clean"
+  - type: "char_swap"
+    levels: [0.1]
+  - type: "char_delete"
+    levels: [0.1]
+
+# We need to relax language filtering because these tasks are specific
+# We will filter in the analysis or just take what we get.
+# languages: ["en", "hi", "mr", "bn"] 
+# Removing generic language filter to allow task-specificlangs.
+
+limit_samples: 5
+output_dir: "results/experiment_v2"

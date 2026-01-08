@@ -1,0 +1,11 @@
+datasets>=2.14.0
+transformers>=4.30.0
+torch>=2.0.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+nlpaug>=1.1.11
+tqdm
+pytest
+PyYAML>=6.0
+matplotlib
+seaborn
