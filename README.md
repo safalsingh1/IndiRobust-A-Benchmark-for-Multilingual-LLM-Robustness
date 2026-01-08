@@ -10,7 +10,7 @@
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The benchmark aims to be modular and extensible. The core pipeline consists of three stages: **Perturbation**, **Inference**, and **Evaluation**.
 
@@ -31,7 +31,7 @@ graph TD
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 ### 1. Linguistic Perturbations
 We move beyond simple Gaussian noise to strictly linguistic perturbations relevent to the Indian context:
@@ -59,7 +59,7 @@ We define rigorous metrics to measure not just accuracy, but stability:
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 IndiRobust/
@@ -89,7 +89,7 @@ IndiRobust/
 
 ---
 
-## 🛠️ Usage
+##  Usage
 
 ### Prerequisites
 - Python 3.8+
@@ -128,7 +128,7 @@ python analysis/error_analysis.py --output analysis/error_cases.json
 
 ---
 
-## 📊 Detailed Results (Simulated)
+##  Detailed Results (Simulated)
 
 ### Overall Model Performance & Robustness
 We evaluate the baseline models, **MuRIL** and **XLM-RoBERTa**, across four languages (En, Hi, Mr, Bn) on Text Classification (SNP) and NLI (WNLI/XNLI) tasks. Table 1 summarizes the aggregate performance on clean and perturbed validation sets.
@@ -169,21 +169,20 @@ Qualitative analysis of failure cases reveals distinct patterns:
 
 ---
 
-## 🔮 Future Work
+##  Future Work
 - **Adversarial Attacks**: Integrating gradient-based attacks (e.g., HotFlip) adapted for agglutinative languages.
 - **Instruction Tuning**: Testing if instruction-tuned variants (e.g., Llama-2-Indic) show better zero-shot robustness.
 - **Context Window**: Exploring robustness in long-context retrieval tasks.
 
 ---
 
-## 📜 Citation
+##  Citation
 If you use this benchmark or codebase, please cite:
 
 ```bibtex
 @misc{indirobust2024,
   title={IndiRobust: Evaluation Framework for Low-Resource LLM Robustness},
-  author={Singh, Safal},
-  year={2024},
-  publisher={Microsoft Research Internship Submission}
+  author={Safal Singh,
+  }
 }
 ```
